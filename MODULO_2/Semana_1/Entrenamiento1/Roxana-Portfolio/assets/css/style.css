@@ -185,8 +185,8 @@ span {
 /* Typing animation text */
 .typing-text {
     font-size: 3.4rem;
-    font-weight: 1000px;
-    min-width: 70px;
+    font-weight: 5000px;
+    min-width: 20px;
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
