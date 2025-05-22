@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap'); 
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%; /* Easier rem calculation: 1rem = 10px */
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+/* Fixed header with background to avoid overlap */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Logo styling with subtle hover scale */
+.logo {
+    font-size: 3rem;
+    color: #eee7a7;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation links styling */
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    cursor: pointer; /* Add pointer cursor for better UX */
+}
+
+nav a:hover,
+nav a.active {
+    color: #eee7a7;
+    border-bottom: 3px solid #eee7a7;
+}
+
+/* Responsive navigation for smaller screens */
+@media(max-width:995px) {
+    nav {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #eee7a7;
+        border-bottom: 3px solid #eee7a7;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem; /* Fixed invalid '1rem solid' */
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #eee7a7;
+    }
+}
+
+/* Section base styles */
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+/* Home section layout */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home .home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span {
+    color: #eee7a7;
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+.home-img {
+    border-radius: 50%;
+}
+
+.home-img img {
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #eee7a7;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+/* Social icon styles */
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #eee7a7;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #eee7a7;
+}
+
+.social-icons a:hover {
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #eee7a7;
+    box-shadow: 0 0 25px #eee7a7;
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #eee7a7;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #eee7a7;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale3d(1.03);
+    background-color: #eee7a7;
+    color: black;
+    box-shadow: 0 0 25px #eee7a7;
+}
+
+/* Typing animation text */
+.typing-text {
+    font-size: 3.4rem;
+    font-weight: 600;
+    min-width: 280px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    color: white; /* Base text color */
+}
+
+.typing-text span {
+    display: inline-block;
+    position: relative;
+}
+
+.typing-text span::before {
+    content: "Software Development Student";
+    animation: words 10s infinite;
+    color: #eee7a7;
+}
+
+.typing-text span::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #eee7a7;
+    animation: cursor-blink 0.7s steps(1) infinite;
+}
+
+/* Blink animation for cursor */
+@keyframes cursor-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Words cycling animation */
+@keyframes words {
+    0%, 20% {
+        content: "Software Development Student";
+    }
+    25%, 45% {
+        content: "Economics Student";
+    }
+    50%, 70% {
+        content: "Pedagogy Graduate";
+    }
+    75%, 100% {
+        content: "Author";
+    }
+}
+
+/* Responsive tweaks for home section */
+@media (max-width: 1000px) {
+    .home {
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px) {
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+/* Smaller font size and wrapping for typing text on mobile */
+@media (max-width: 600px) {
+    .typing-text {
+        font-size: 2.4rem;  /* Smaller text on mobiles */
+        min-width: 180px;
+        white-space: normal; /* Allow wrapping if needed */
+    }
+    
+    .typing-text span::before {
+        font-size: 2.4rem;
+    }
+}
+
+/* Footer styling */
+footer {
+  background-color: #111;
+  color: #eee7a7;
+  padding: 2rem 9%;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  border-top: 1px solid #eee7a7;
+}
+
+/* ===== Skills Section ===== */
+.skills-section {
+  max-width: 900px;
+  margin: 6rem auto;
+  padding: 0 2rem;
+  background-color: #000;
+  color: #eee7a7;
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+/* Title styling */
+.section-title {
+  font-size: 3.6rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #eee7a7;
+}
+
+/* Skill card spacing */
+.skill-card {
+  margin-bottom: 3rem;
+}
+
+/* Skill card heading with border */
+.skill-card h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #eee7a7;
+  padding-bottom: 0.5rem;
+  color: #fff;
+}
+
+/* Remove default list style, add padding */
+.skill-card ul {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+/* Custom bullet points */
+.skill-card ul li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.7rem;
+}
+
+.skill-card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #eee7a7;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+/* Footer match styling */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: #eee7a7;
+  font-size: 1.5rem;
+  background-color: black;
+  border-top: 1px solid #333;
+}
+
+/* Responsive adjustments for skills section */
+@media (max-width: 600px) {
+  .skills-section {
+    font-size: 1.6rem;
+    padding: 0 1.5rem; /* Added padding for better spacing on small screens */
+  }
+
+  .section-title {
+    font-size: 2.8rem;
+  }
+
+  .skill-card h2 {
+    font-size: 2rem;
+  }
+}
+
+/* ===== Contact Section ===== */
+.contact {
+  background-color: #000;
+  color: #fff;
+  padding: 5rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Contact form container with padding and shadow */
+.contact-container {
+  max-width: 700px;
+  width: 100%;
+  background-color: #111;
+  padding: 3rem 2rem; /* Added horizontal padding for small devices */
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+}
+
+/* Contact heading */
+.contact-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #eee7a7;
+}
+
+/* Intro paragraph styling */
+.contact-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  color: #ccc;
+}
+
+/* Form group spacing */
+.contact-form .form-group {
+  margin-bottom: 1.8rem;
+}
+
+/* Label styling with icon */
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #eee7a7;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Input and textarea styling */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  background-color: #222;
+  color: #eee7a7;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  resize: vertical;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+/* Accessibility: add visible focus outline */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #eee7a7;
+  outline: 2px solid #eee7a7;
+  outline-offset: 2px;
+}
+
+/* Submit button styling */
+.contact-form button[type="submit"] {
+  background-color: transparent;
+  border: 2px solid #eee7a7;
+  padding: 1rem 2.5rem;
+  border-radius: 6px;
+  color: #eee7a7;
+  font-weight: 600;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: #eee7a7;
+  color: black;
+}
+
+/* Responsive contact container */
+@media (max-width: 600px) {
+  .contact-container {
+    padding: 3rem 1.5rem; /* Added padding for small devices */
+  }
+}
