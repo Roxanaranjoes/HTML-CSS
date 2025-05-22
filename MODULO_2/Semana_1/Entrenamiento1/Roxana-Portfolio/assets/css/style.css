@@ -485,3 +485,87 @@ footer {
     padding: 3rem 1.5rem; /* Added padding for small devices */
   }
 }
+/* === Education Section === */
+.education-section {
+max-width: 900px;
+margin: 6rem auto;
+padding: 0 2rem;
+background-color: #000;
+color: #eee7a7;
+font-size: 1.8rem;
+line-height: 1.6;
+}
+
+.education-entry {
+margin-bottom: 3rem;
+}
+
+.education-entry h2 {
+font-size: 2.2rem;
+margin-bottom: 0.5rem;
+color: #fff;
+}
+
+.divider {
+border: none;
+border-top: 1px solid #eee7a7;
+margin: 2rem 0;
+}
+
+/* === Projects Section === */
+.projects-section {
+max-width: 900px;
+margin: 6rem auto;
+padding: 0 2rem;
+color: #eee7a7;
+}
+
+.project-item {
+margin-bottom: 4rem;
+}
+
+.project-item h3 {
+font-size: 2rem;
+margin-bottom: 0.5rem;
+color: #fff;
+}
+
+.project-item p {
+margin-bottom: 1rem;
+}
+
+.project-item img {
+width: 100%;
+max-width: 600px;
+border-radius: 10px;
+box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* === Project Table === */
+.projects-table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 3rem;
+font-size: 1.6rem;
+}
+
+.projects-table th,
+.projects-table td {
+border: 1px solid #eee7a7;
+padding: 1rem;
+text-align: left;
+}
+
+.projects-table th {
+background-color: #111;
+color: #eee7a7;
+}
+
+.projects-table a {
+color: #eee7a7;
+text-decoration: underline;
+}
+
+.projects-table a:hover {
+color: #fff6b2;
+}
