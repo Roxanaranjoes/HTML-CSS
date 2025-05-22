@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding -->
+  <meta charset="UTF-8" />
+  
+  <!-- Responsive for mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Page title -->
+  <title>Contact | Roxana Portfolio</title>
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  
+  <!-- Custom stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Site header: logo and main navigation -->
+  <header>
+    <!-- Logo linking back to home -->
+    <a href="index.html" class="logo">Roxana</a>
+    
+    <!-- Navigation menu -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#">Services</a>
+      <a href="skills.html">Skills</a>
+      <a href="#">Education</a>
+      <a href="#">Experience</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Contact section -->
+  <section class="contact">
+    <div class="contact-container">
+      <!-- Main heading for this section -->
+      <h1>Let's Connect</h1>
+      
+      <!-- Introductory paragraph -->
+      <p class="contact-intro">Feel free to reach out for collaborations, questions, or just to say hello!</p>
+
+      <!-- Contact form -->
+      <form class="contact-form" action="#" method="post">
+        
+        <!-- Name input group -->
+        <div class="form-group">
+          <label for="name"><i class="fa-solid fa-user"></i> Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <!-- Email input group -->
+        <div class="form-group">
+          <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <!-- Message textarea -->
+        <div class="form-group">
+          <label for="message"><i class="fa-solid fa-comment-dots"></i> Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer with copyright -->
+  <footer>
+    <p>&copy; 2025 Roxana Naranjo Estrada</p>
+  </footer>
+
+</body>
+</html>
+
