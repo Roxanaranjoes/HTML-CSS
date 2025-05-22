@@ -68,38 +68,21 @@ nav a.active {
 }
 
 /* Responsive navigation for smaller screens */
-@media(max-width:995px) {
-    nav {
-        position: absolute;
-        display: none;
-        top: 0;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid #eee7a7;
-        border-bottom: 3px solid #eee7a7;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem; /* Fixed invalid '1rem solid' */
-        background-color: #161616;
-        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-    }
-
-    nav.active {
-        display: block;
-    }
-
-    nav a {
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-    }
-
-    nav a:hover,
-    nav a.active {
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #eee7a7;
-    }
+@media (max-width: 600px) {
+nav {
+flex-direction: column;
+align-items: center;
+gap: 1.5rem;
+margin-top: 1rem;
 }
+
+nav a {
+font-size: 1.6rem;
+margin: 0;
+padding: 0.5rem;
+}
+}
+
 
 /* Section base styles */
 section {
