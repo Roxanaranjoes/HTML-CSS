@@ -299,6 +299,17 @@ main {
   height: auto;
   border-radius: 8px;
 }
+/mi-sitio-web
+│
+├── index.html
+├── about.html
+├── portfolio.html
+├── contact.html
+├── styles/
+│   └── styles.css
+├── images/
+│   └── [tus-imágenes]
+├── README.md
 # Portafolio Web – Roxana Naranjo
 
 ## Descripción
