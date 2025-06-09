@@ -51,5 +51,15 @@ Thanks for visiting my repository 😊/
     background-color: lightgray;
   }
 }
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
 https://github.com/jmgrgo/developmentTraining_Riwi/tree/main/Module2/additionalExercises/Positivus
