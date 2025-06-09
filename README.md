@@ -23,4 +23,33 @@ Learning HTML and CSS from scratch with dedication and excitement 💪
 
 ---
 
-Thanks for visiting my repository 😊
+Thanks for visiting my repository 😊/
+* Teléfonos pequeños (0–480px) */
+@media (max-width: 480px) {
+  body {
+    background-color: lightcoral;
+  }
+}
+
+/* Teléfonos grandes y tablets pequeñas (481–768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+/* Tablets y laptops pequeñas (769–1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+/* Laptops y escritorios grandes (1025px en adelante) */
+@media (min-width: 1025px) {
+  body {
+    background-color: lightgray;
+  }
+}
+
+
