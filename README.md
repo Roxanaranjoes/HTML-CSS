@@ -132,4 +132,195 @@ Thanks for visiting my repository 😊/
 </body>
 </html>
 
-https://github.com/jmgrgo/developmentTraining_Riwi/tree/main/Module2/additionalExercises/Positivus
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Portafolio | Roxana Naranjo</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Roxana Naranjo</h1>
+    <nav>
+      <ul>
+        <li><a href="about.html">Sobre mí</a></li>
+        <li><a href="portfolio.html">Portafolio</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Bienvenidos</h2>
+      <p>Desarrolladora web con pasión por el diseño, la tecnología y las experiencias digitales significativas.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Roxana Naranjo. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+/* Tipografía y colores base */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f2f2f2;
+  color: #333;
+  line-height: 1.6;
+}
+
+header, nav, footer {
+  background-color: #0077b6;
+  color: white;
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  justify-content: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #90e0ef;
+}
+
+/* Secciones principales */
+main {
+  padding: 2rem;
+}
+
+.intro {
+  text-align: center;
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.intro:hover {
+  transform: translateY(-5px);
+}
+
+/* Diseño Responsivo */
+@media (max-width: 1024px) {
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header, nav, footer {
+    text-align: center;
+  }
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio | Roxana</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Mi Portafolio</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Sobre mí</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="portfolio-grid">
+      <article class="project">
+        <img src="images/proyecto1.jpg" alt="Proyecto 1" />
+        <h3>Proyecto 1</h3>
+        <p>Sitio web para una tienda de ropa ecológica.</p>
+      </article>
+      <article class="project">
+        <img src="images/proyecto2.jpg" alt="Proyecto 2" />
+        <h3>Proyecto 2</h3>
+        <p>Blog personal sobre viajes y cultura.</p>
+      </article>
+      <article class="project">
+        <img src="images/proyecto3.jpg" alt="Proyecto 3" />
+        <h3>Proyecto 3</h3>
+        <p>Plataforma de recetas veganas.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>Gracias por visitar mi portafolio.</p>
+  </footer>
+</body>
+</html>
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project {
+  background: white;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.03);
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+# Portafolio Web – Roxana Naranjo
+
+## Descripción
+Este sitio web es un portafolio personal donde presento quién soy, algunos de mis proyectos y una forma de contactarme.
+
+## Estructura
+- **index.html:** Página principal
+- **about.html:** Sobre mí
+- **portfolio.html:** Proyectos destacados
+- **contact.html:** Formulario de contacto
+
+## Tecnologías
+- HTML5
+- CSS3 (Flexbox + Grid)
+- Diseño Responsivo
+
+## Información del Coder
+- **Nombre:** Roxana Naranjo Estrada
+- **Clan:** Be a Codernnn
+- **Correo:** roxana@example.com
+- **Documento de Identidad:** 123456789
+
+## Cómo visualizar el proyecto
+Puedes clonar el repositorio y abrir `index.html` en tu navegador favorito.
+//github.com/jmgrgo/developmentTraining_Riwi/tree/main/Module2/additionalExercises/Positivus
